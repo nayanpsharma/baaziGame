@@ -1,0 +1,554 @@
+// import "./styles.css";
+
+// let slideIndex = 1;
+// showSlides(slideIndex);
+// let i;
+
+// // function showSlides(n) {
+// //   let i;
+// //   let slides = document.getElementsByClassName("mySlides");
+// //   let dots = document.getElementsByClassName("dot");
+// //   if (n > slides.length) {
+// //     slideIndex = 1;
+// //   }
+// //   if (n < 1) {
+// //     slideIndex = slides.length;
+// //   }
+// //   for (i = 0; i < slides.length; i++) {
+// //     slides[i].style.display = "none";
+// //   }
+// //   for (i = 0; i < dots.length; i++) {
+// //     dots[i].className = dots[i].className.replace(" active", "");
+// //   }
+// //   slides[slideIndex - 1].style.display = "block";
+// //   dots[slideIndex - 1].className += " active";
+// // }
+// // Automatic Slideshow - change image every 3 seconds
+// showSlides();
+
+// function showSlides() {
+//   let i;
+//   let slides = document.getElementsByClassName("mySlides");
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   slideIndex++;
+//   if (slideIndex > slides.length) {
+//     slideIndex = 1;
+//   }
+//   slides[slideIndex - 1].style.display = "block";
+//   setTimeout(showSlides, 3000); // Change image every 3 seconds
+// }
+
+// // accordion Start here
+
+// const accordion = document.getElementsByClassName("accordion");
+
+// for (i = 0; i < accordion.length; i++) {
+//   accordion[i].addEventListener("click", function () {
+//     this.classList.toggle("activeAccor");
+//   });
+// }
+
+// // testimonials_cards slider
+
+// let slideIndexTest = 1;
+// showSlidesTest(slideIndexTest);
+
+// // Next/previous controls
+// function plusSlides(n) {
+//   showSlidesTest((slideIndexTest += n));
+// }
+
+// function currentSlide(n) {
+//   showSlidesTest((slideIndexTest = n));
+// }
+
+// function showSlidesTest(card) {
+//   let i;
+//   let slides = document.getElementsByClassName("testimonials_card");
+//   for (i = 0; i < slides.length; i++) {
+//     // slides[i].style.display = "none";
+
+//     slides[i].classList.remove("card--left");
+//     slides[i].classList.remove("card--center");
+//     slides[i].classList.remove("card--right");
+//   }
+//   slides[card].classList.add("card--center");
+//   if (card == 0) {
+//     slides[2].classList.add("card--left");
+//     slides[1].classList.add("card--right");
+//   }
+//   if (card == 1) {
+//     slides[0].classList.add("card--left");
+//     slides[2].classList.add("card--right");
+//   }
+//   if (card == slides.length - 1) {
+//     slides[1].classList.add("card--left");
+//     slides[0].classList.add("card--right");
+//   }
+
+//   slideIndexTest++;
+//   if (slideIndexTest > slides.length) {
+//     slideIndexTest = 1;
+//   }
+//   // slides[slideIndexTest - 1].style.display = "flex";
+//   // slides[slideIndexTest - 1].classList.add("fade-in-right");
+
+//   setTimeout(showSlidesTest, 2000); // Change image every 4 seconds
+// }
+
+// document.getElementById("app").innerHTML = (
+
+//   <>
+//     <div class="container">
+//       {/* <!-- here Home hero start --> */}
+//       <div class="hero">
+//         {/* <!-- here added BG For hero --> */}
+//         <div class="hero_bg">
+//           <img src="./assets/bg.png" alt="backgrongImg" />
+//         </div>
+//         <div class="hero_container">
+//           <div class="hero_left">
+//             {/* <!-- Here Logo Section Start --> */}
+//             <div class="logo_section">
+//               <img src="./assets/logo.png" alt="logo" />
+//             </div>
+//             {/* <!-- Middle part start here --> */}
+//             <div class="middle">
+//               <h1 class="heading">
+//                 One App,
+//                 <br />
+//                 <span>Multiple Card Games </span>to Enjoy
+//               </h1>
+//               <p class="sub_heading">
+//                 Welcome to India’s favourite card gaming destination
+//               </p>
+//               <div class="hero_btn_sections">
+//                 <div class="input">
+//                   <label>+91</label>
+//                   <input
+//                     class="hero_btns"
+//                     type="text"
+//                     placeholder="Enter the mobile number"
+//                   />
+//                 </div>
+//                 <button class="hero_getLink_btn hero_btns">
+//                   GET APP LINK ON SMS
+//                 </button>
+//                 <button class="bonus_btn">Get ₹50 Joining Bonus</button>
+//               </div>
+//             </div>
+//             <div class="hero_left_bottom">
+//               <h1 class="hero_left_bottom_heading">
+//                 Instant withdrawal partner
+//               </h1>
+//               <div class="paytm_btn">
+//                 <img src="./assets/paytm.png" alt="paytm" />
+//               </div>
+//             </div>
+//           </div>
+//           <div class="hero_right">
+//             <div class="right_Bg">
+//               <div class="mobile_wall">
+//                 <img src="./assets/mobileWall.png" alt="mobileWall" />
+//               </div>
+//               <div class="hero_right_bg">
+//                 <img src="./assets/mobileBg.png" alt="hero_right_bg" />
+//               </div>
+//             </div>
+//             <div class="right_content">
+//               <div class="right_content_top">
+//                 <h1 class="right_content_heading">
+//                   Our <span>Games</span>
+//                 </h1>
+//                 <p class="right_content_sub_heading">
+//                   Welcome to India’s favourite card gaming destination.
+//                 </p>
+//               </div>
+
+//               {/* <!-- Slideshow container --> */}
+//               <div class="slideshow-container">
+//                 <img src="./assets/Rummy.png" class="mySlides fade" alt="" />
+//                 <img src="./assets/Rummy.png" class="mySlides fade" alt="" />
+//                 <img src="./assets/Rummy.png" class="mySlides fade" alt="" />
+//               </div>
+//               {/* <!-- The dots/circles --> */}
+//               <div style="text-align:center">
+//                 <span class="dot" onclick={currentSlide(1)}></span>
+//                 <span class="dot" onclick={currentSlide(2)}></span>
+//                 <span class="dot" onclick={currentSlide(3)}></span>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* <!-- Here end home hero --> */}
+
+//       {/* <!-- Here start the WINNER’S Testimonials --> */}
+//       <div class="testimonials">
+//         <h1 class="testimonials_heading">
+//           <span>Winners’</span> Testimonials
+//         </h1>
+//         <div class="testimonials_cards">
+//           <div class="testimonials_card fade">
+//             <div class="testimonials_card_img">
+//               <img src="./assets/testimonial1.png" alt="testimonial1" />
+//             </div>
+//             <div class="star_images">
+//               <img src="./assets/star.png" alt="star" />
+//               <img src="./assets/star.png" alt="star" />
+//               <img src="./assets/star.png" alt="star" />
+//               <img src="./assets/star.png" alt="star" />
+//               <img src="./assets/star.png" alt="star" />
+//             </div>
+//             <p class="testimonials_content">
+//               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+//               eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+//               <span class="quots">“</span>
+//             </p>
+//           </div>
+//           <div class="testimonials_card fade">
+//             <div class="testimonials_card_img">
+//               <img src="./assets/testimonial2.png" alt="testimonial1" />
+//             </div>
+//             <div class="star_images">
+//               <img src="./assets/star.png" alt="star" />
+//               <img src="./assets/star.png" alt="star" />
+//               <img src="./assets/star.png" alt="star" />
+//               <img src="./assets/star.png" alt="star" />
+//               <img src="./assets/star.png" alt="star" />
+//             </div>
+//             <p class="testimonials_content">
+//               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+//               eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+//               <span class="quots">“</span>
+//             </p>
+//           </div>
+//           <div class="testimonials_card fade">
+//             <div class="testimonials_card_img">
+//               <img src="./assets/testimonial3.png" alt="testimonial1" />
+//             </div>
+//             <div class="star_images">
+//               <img src="./assets/star.png" alt="star" />
+//               <img src="./assets/star.png" alt="star" />
+//               <img src="./assets/star.png" alt="star" />
+//               <img src="./assets/star.png" alt="star" />
+//               <img src="./assets/star.png" alt="star" />
+//             </div>
+//             <p class="testimonials_content">
+//               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+//               eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+//               <span class="quots">“</span>
+//             </p>
+//           </div>
+//         </div>
+//         {/* <!-- Next and previous buttons --> */}
+//         <div class="testimonials_btn">
+//           <button class="prev" onclick={plusSlides(-1)}>
+//             <img src="./assets/prev.png" alt="prev" />
+//           </button>
+//           <button class="next" onclick={plusSlides(1)}>
+//             <img src="./assets/next.png" alt="next" />
+//           </button>
+//         </div>
+//       </div>
+
+//       {/* <!-- Why Our Game --> */}
+
+//       <div class="why_our_game">
+//         <h1 class="why_our_game_heading">
+//           <span>Why</span> Our Game
+//         </h1>
+//         <div class="why_our_game_cards">
+//           <div class="why_our_game_card">
+//             <div class="why_our_game_card_img">
+//               <img src="./assets/support.png" alt="why_our_game1" />
+//             </div>
+//             <h1 class="why_our_game_card_heading">24x7 Support</h1>
+//             <p class="why_our_game_card_content">
+//               Voluptate aute et repreh magna excepteur exercitation.
+//             </p>
+//           </div>
+
+//           <div class="why_our_game_card">
+//             <div class="why_our_game_card_img">
+//               <img src="./assets/certificate.png" alt="certificate" />
+//             </div>
+//             <h1 class="why_our_game_card_heading">RNG Certifiedh</h1>
+//             <p class="why_our_game_card_content">
+//               Voluptate aute et repreh magna excepteur exercitation.
+//             </p>
+//           </div>
+
+//           <div class="why_our_game_card">
+//             <div class="why_our_game_card_img">
+//               <img src="./assets/withdrawal.png" alt="withdrawal" />
+//             </div>
+//             <h1 class="why_our_game_card_heading">Instant Withdrawal </h1>
+//             <p class="why_our_game_card_content">
+//               Voluptate aute et repreh magna excepteur exercitation.
+//             </p>
+//           </div>
+
+//           <div class="why_our_game_card">
+//             <div class="why_our_game_card_img">
+//               <img src="./assets/bot.png" alt="bot" />
+//             </div>
+//             <h1 class="why_our_game_card_heading">Bot Free</h1>
+//             <p class="why_our_game_card_content">
+//               Voluptate aute et repreh magna excepteur exercitation.
+//             </p>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* <!-- Here end the WINNER’S Testimonials --> */}
+
+//       {/* <!-- here start install app for mobile version --> */}
+
+//       <div class="install_app">
+//         <div class="install_app_heading_bar">
+//           <h1 class="install_app_heading">How To Install CardBaazi App</h1>
+//           <h6 class="install_app_sub_heading">
+//             Follow these steps to start playing
+//           </h6>
+//         </div>
+
+//         <div class="install_app_cards">
+//           <div class="install_app_card">
+//             <div class="install_app_card_back">
+//               <div class="install_app_card_img">
+//                 <img src="./assets/mobileFrame.png" alt="install_app1" />
+//               </div>
+//               <div class="instrns">
+//                 <h1 class="instrns_heading">Step 1</h1>
+//                 <p class="instrns_content">
+//                   Press “OK” to complete the download.
+//                 </p>
+//               </div>
+//             </div>
+//             <div class="install_app_popup">
+//               <div class="install_app_popup_top">
+//                 <div class="alert_img">
+//                   <img src="./assets/alert.png" alt="alert" />
+//                 </div>
+//                 <p class="alert_instrns">
+//                   This type of file can harm your device. Do you want to keep
+//                   CardBaazi_App_v1.1.apk anyway?
+//                 </p>
+//                 <div class="closeBtn">
+//                   <img src="./assets/closeBtn.png" alt="" />
+//                 </div>
+//               </div>
+//               <div class="install_app_btns">
+//                 <button class="install_app_btn cancel">Cancel</button>
+//                 <button class="install_app_btn ok">OK</button>
+//               </div>
+//             </div>
+//           </div>
+
+//           <div class="install_app_card">
+//             <div class="install_app_card_back">
+//               <div class="install_app_card_img">
+//                 <img src="./assets/mobileFrame.png" alt="install_app1" />
+//               </div>
+//               <div class="instrns">
+//                 <h1 class="instrns_heading">Step 2</h1>
+//                 <p class="instrns_content">
+//                   Wait for download to finish currently supported android 5.1 &
+//                   above.
+//                 </p>
+//               </div>
+//             </div>
+//             <div class="install_app_popup">
+//               <div class="install_app_popup_top download_pop">
+//                 <div class="alert_img">
+//                   <img src="./assets/download.png" alt="alert" />
+//                 </div>
+//               </div>
+//             </div>
+//           </div>
+
+//           <div class="install_app_card">
+//             <div class="install_app_card_back">
+//               <div class="install_app_card_img">
+//                 <img src="./assets/mobileFrame.png" alt="install_app1" />
+//               </div>
+//               <div class="instrns">
+//                 <h1 class="instrns_heading">Step 3</h1>
+//                 <p class="instrns_content">
+//                   Allow the App to install from this source.
+//                 </p>
+//               </div>
+//             </div>
+//             <div class="install_app_popup">
+//               <div class="install_app_popup_top unknown_sour">
+//                 <h2 class="device_admin">Device Administration</h2>
+//                 <h1 class="unknown_sources">Unknown Sources</h1>
+//                 <p class="alert_instrns">
+//                   Allow install of apps from sources other than the Play store
+//                 </p>
+//               </div>
+//               <div class="install_app_btns">
+//                 <label class="switch">
+//                   <input class="checkbox_input" type="checkbox" />
+//                   <span class="slider round"></span>
+//                 </label>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* <!-- here end install app for mobile version --> */}
+
+//       {/* <!-- Faq's start here --> */}
+
+//       <div class="faq">
+//         <h1 class="faq_heading">
+//           Faq’<span>s</span>
+//         </h1>
+
+//         <div class="faq_container">
+//           <div class="accordion">
+//             <h1 class="label">How do cashbacks work?</h1>
+//             <div class="panel">
+//               <p>
+//                 No, there is no capping to our affiliate’s earnings. Bring
+//                 aboard as many players as you can and earn unlimited cashback.
+//               </p>
+//             </div>
+//           </div>
+
+//           <div class="accordion">
+//             <h1 class="label">Is there a cap on the earnings?</h1>
+//             <div class="panel">
+//               <p>
+//                 No, there is no capping to our affiliate’s earnings. Bring
+//                 aboard as many players as you can and earn unlimited cashback.
+//               </p>
+//             </div>
+//           </div>
+//           <div class="accordion">
+//             <h1 class="label">How can I track my earnings?</h1>
+//             <div class="panel">
+//               <p>
+//                 No, there is no capping to our affiliate’s earnings. Bring
+//                 aboard as many players as you can and earn unlimited cashback.
+//               </p>
+//             </div>
+//           </div>
+//           <div class="accordion">
+//             <h1 class="label">How can I sign-up to this program?</h1>
+//             <div class="panel">
+//               <p>
+//                 No, there is no capping to our affiliate’s earnings. Bring
+//                 aboard as many players as you can and earn unlimited cashback.
+//               </p>
+//             </div>
+//           </div>
+//           <div class="accordion">
+//             <h1 class="label">
+//               Is there a minimum period of time of collaboration?
+//             </h1>
+//             <div class="panel">
+//               <p>
+//                 No, there is no capping to our affiliate’s earnings. Bring
+//                 aboard as many players as you can and earn unlimited cashback.
+//               </p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* <!-- Footer start here --> */}
+
+//       <footer class="footer">
+//         <div class="footer_container">
+//           <div class="footer_top">
+//             <div class="footer_payments">
+//               <h2 class="footer_heading">PAyment Methods</h2>
+//               <div class="footer_payment_methods">
+//                 <img src="./assets/Cashfree.png" alt="payment1" />
+//                 <img src="./assets/PaytmFooter.png" alt="payment2" />
+//                 <img src="./assets/PayU.png" alt="payment3" />
+//               </div>
+//             </div>
+//             <div class="social_media">
+//               <h2 class="social_media_heading">Social media</h2>
+//               <ul class="social_icons">
+//                 <li>
+//                   <img src="./assets/facebook.png" alt="" />
+//                 </li>
+//                 <li>
+//                   <img src="./assets/insta.png" alt="" />
+//                 </li>
+//                 <li>
+//                   <img src="./assets/linkdn.png" alt="" />
+//                 </li>
+//                 <li>
+//                   <img src="./assets/tweet.png" alt="" />
+//                 </li>
+//               </ul>
+//             </div>
+//           </div>
+
+//           <div class="footer_links">
+//             <ul>
+//               <li>
+//                 <a href="#">Home</a>
+//               </li>
+//               <li>
+//                 <a href="#">About Us</a>
+//               </li>
+//               <li>
+//                 <a href="#">Games</a>
+//               </li>
+//             </ul>
+//             <ul>
+//               <li>
+//                 <a href="#">Responsible Gaming</a>
+//               </li>
+//               <li>
+//                 <a href="#">Terms Of Use</a>
+//               </li>
+//               <li>
+//                 <a href="#">Legality</a>
+//               </li>
+//             </ul>
+//             <ul>
+//               <li>
+//                 <a href="#">Blog</a>
+//               </li>
+//               <li>
+//                 <a href="#">Contact Us</a>
+//               </li>
+//               <li>
+//                 <a href="#">Affiliate Program</a>
+//               </li>
+//             </ul>
+//             <ul>
+//               <li>
+//                 <a href="#">FaQ</a>
+//               </li>
+//               <li>
+//                 <a href="#">Certification</a>
+//               </li>
+//               <li>
+//                 <a href="#">Privacy Policy</a>
+//               </li>
+//             </ul>
+//           </div>
+//         </div>
+
+//         {/* Copyright section start  */}
+
+//         <div class="footer_copyright">
+//           <p>Copyright &#169;2021 www.baazigames.com. All rights reserved.</p>
+//         </div>
+//       </footer>
+//     </div>
+//   </>
+// );
